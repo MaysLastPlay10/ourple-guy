@@ -69,7 +69,7 @@ class SUtil
 		{
 			Lib.application.window.alert("Why did you create two files called assets and mods instead of copying the folders from the .APK?, expect a crash.",
 				'Error!');
-			LimeSystem.exit(1);
+			//LimeSystem.exit(1);
 		}
 		else
 		{
