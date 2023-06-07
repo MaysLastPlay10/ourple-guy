@@ -271,4 +271,4 @@ class MobileControlsSubState extends FlxSubState
 		if (hitbox != null)
 			remove(hitbox);
 	}
-}
+} //[ALL OF THIS ARE USELESS FOR NOW]
