@@ -31,6 +31,9 @@ class Main extends Sprite
 
 	public function new()
 	{
+		//[MOBILE STUFF]
+		SUtil.uncaughtErrorHandler();
+		
 		super();
 
 		if (stage != null)
@@ -72,6 +75,10 @@ class Main extends Sprite
 		#end
 	
 		ClientPrefs.loadDefaultKeys();
+		
+		//[MOBILE STUFF]
+		SUtil.checkFiles();
+		
 		addChild(new FlxGame(gameWidth, gameHeight, initialState, #if (flixel < "5.0.0") zoom, #end framerate, framerate, skipSplash, startFullscreen));
 
 		#if !mobile
