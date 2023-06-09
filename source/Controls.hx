@@ -10,11 +10,11 @@ import flixel.input.actions.FlxActionSet;
 import flixel.input.gamepad.FlxGamepadButton;
 import flixel.input.gamepad.FlxGamepadInputID;
 import flixel.input.keyboard.FlxKey;
-#if mobile
+/*#if mobile
 import mobile.flixel.FlxButton;
 import mobile.flixel.FlxHitbox;
 import mobile.flixel.FlxVirtualPad;
-#end
+#end*/
 
 #if (haxe >= "4.0.0")
 enum abstract Action(String) to String from String
@@ -384,7 +384,7 @@ class Controls extends FlxActionSet
 	}
 	#end
 
-	#if mobile
+/*	#if mobile
 	public var trackedInputsUI:Array<FlxActionInput> = [];
 	public var trackedInputsNOTES:Array<FlxActionInput> = [];
 
@@ -514,7 +514,7 @@ class Controls extends FlxActionSet
 			}
 		}
 	}
-	#end
+	#end*/
 
 	override function update()
 	{
