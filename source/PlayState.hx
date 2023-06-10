@@ -60,9 +60,9 @@ import FunkinLua;
 import DialogueBoxPsych;
 import Shaders;
 import DynamicShaderHandler;
-#if sys
+//#if sys
 import sys.FileSystem;
-#end
+//#end
 
 using StringTools;
 
