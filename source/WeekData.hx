@@ -249,7 +249,7 @@ class WeekData {
 		Paths.currentModDirectory = '';
 		
 		#if MODS_ALLOWED
-		if (SUtil.getStorageDirectory() + FileSystem.exists("modsList.txt"))
+		if (FileSystem.exists(SUtil.getStorageDirectory() + "modsList.txt"))
 		{
 			var list:Array<String> = CoolUtil.listFromString(File.getContent(SUtil.getStorageDirectory() + "modsList.txt"));
 			var foundTheTop = false;
