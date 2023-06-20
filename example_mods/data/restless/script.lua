@@ -20,11 +20,11 @@ function onCreatePost()
 end
 
 function onStartCountdown()
-	--[[if not allowCountdown then
+	if not allowCountdown then
 		characterPlayAnim('bf', 'idle', true)
 		runTimer('transform', 1.5)
 		return Function_Stop
-	end]]
+	end
 	return Function_Continue
 end
 
