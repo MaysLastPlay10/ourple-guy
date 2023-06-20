@@ -37,7 +37,7 @@ float noise(vec2 _v) {
 }
 
 void main() {
-	vec2 uv = openfl_TextureCoordv; //gl_FragCoord.xy / resolution; //[FOR MOBILE GLSL LEL]
+	vec2 uv = (openfl_TextureCoordv.xy * openfl_TextureSize.xy) / openfl_TextureSize; //gl_FragCoord.xy / resolution; //[FOR MOBILE GLSL LEL]
 	vec2 uvn = uv;
 	vec3 col = vec3(0.0);
 	vec4 color = texture2D(bitmap, uv);
