@@ -291,7 +291,7 @@ class PlayState extends MusicBeatState
 
 	override public function create()
 	{
-		addCustomCode();
+		//addCustomCode();
 		
 		Paths.clearStoredMemory();
 
@@ -4520,7 +4520,7 @@ class PlayState extends MusicBeatState
 		callOnLuas('onStepHit', []);
 		
 		var ret:Dynamic = callOnLuas('onStepHit', []);
-		textDebug.text = "Return Lua: " + ret + "\nLua Property: " + FunkinLua.Function_Stop;
+		//textDebug.text = "Return Lua: " + ret + "\nLua Property: " + FunkinLua.Function_Stop;
 	}
 
 	var lightningStrikeBeat:Int = 0;
