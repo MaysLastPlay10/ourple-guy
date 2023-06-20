@@ -13,9 +13,11 @@ function onUpdate()
 		--stopped = false
 		startCountdown()
 		twoT = true
+		debugPrint('Started 1 tap, EXCUTED COUNTDOWN')
 	end
 	if mouseClicked('left') and twoT then
 		stopped = false
 		startCountdown()
+		debugPrint('Started 2 tap, EXCUTED COUNTDOWN WITH CONTINUE')
 	end
 end --[TROUBLESHOOTING]
