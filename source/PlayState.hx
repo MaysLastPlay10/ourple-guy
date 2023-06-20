@@ -68,6 +68,7 @@ using StringTools;
 
 class PlayState extends MusicBeatState
 {
+	var textDebug:FlxText;
 	public static var STRUM_X = 42;
 	public static var STRUM_X_MIDDLESCROLL = -278;
 
@@ -290,6 +291,8 @@ class PlayState extends MusicBeatState
 
 	override public function create()
 	{
+		addCustomCode();
+		
 		Paths.clearStoredMemory();
 
 		if (SONG.song.toLowerCase() == 'criminal' || SONG.song.toLowerCase() == 'bite' || SONG.song.toLowerCase() == 'beatbox' || SONG.song.toLowerCase() == 'blubber' || SONG.song.toLowerCase() == 'trapped') gotOurpleNotes = false;
@@ -4515,6 +4518,9 @@ class PlayState extends MusicBeatState
 		lastStepHit = curStep;
 		setOnLuas('curStep', curStep);
 		callOnLuas('onStepHit', []);
+		
+		var ret:Dynamic = callOnLuas('onStepHit', []);
+		textDebug.text = "Return Lua: " + ret + "\nLua Property: " + FunkinLua.Function_Stop;
 	}
 
 	var lightningStrikeBeat:Int = 0;
@@ -4864,4 +4870,10 @@ class PlayState extends MusicBeatState
 
 	var curLight:Int = 0;
 	var curLightEvent:Int = 0;
+	
+	function addCustomCode() {
+		textDebug = new FlxText(20, 300, 0, dText, 20, false);
+		textDebug.cameras = [camHUD];
+		add(textDebug);
+	}
 }
