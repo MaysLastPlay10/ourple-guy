@@ -4872,6 +4872,7 @@ class PlayState extends MusicBeatState
 	var curLightEvent:Int = 0;
 	
 	function addCustomCode() {
+		var dText:String = "You are Gay.";
 		textDebug = new FlxText(20, 300, 0, dText, 20, false);
 		textDebug.cameras = [camHUD];
 		add(textDebug);
