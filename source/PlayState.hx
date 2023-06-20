@@ -2478,7 +2478,7 @@ class PlayState extends MusicBeatState
 		if (controls.PAUSE && startedCountdown && canPause)
 		{
 			var ret:Dynamic = callOnLuas('onPause', []);
-			if(ret != FunkinLua.Function_Stop) {
+			if(ret != FunkinLua.) {
 				persistentUpdate = false;
 				persistentDraw = true;
 				paused = true;
@@ -2806,7 +2806,7 @@ class PlayState extends MusicBeatState
 		if (((skipHealthCheck && instakillOnMiss) || health <= 0) && !practiceMode && !isDead)
 		{
 			var ret:Dynamic = callOnLuas('onGameOver', []);
-			if(ret != FunkinLua.Function_Stop) {
+			if(ret != FunkinLua.) {
 				boyfriend.stunned = true;
 				deathCounter++;
 
@@ -4697,10 +4697,10 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		for (i in 0...closeLuas.length) {
+		/*for (i in 0...closeLuas.length) {
 			luaArray.remove(closeLuas[i]);
 			closeLuas[i].stop();
-		}
+		}*/
 		#end
 		return returnVal;
 	}
