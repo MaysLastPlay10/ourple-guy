@@ -34,9 +34,11 @@ class DynamicShaderHandler
 
 	public function new(fileName:String, optimize:Bool = false)
 	{
-		var path = Paths.modsShaderFragment(fileName);
+		var path = Paths.modsShaderFragment(fileName); //mods/shaders/CRT.frag
 		trace(path);
-		if (!FileSystem.exists(path)) path = Paths.shaderFragment(fileName);
+		if (!FileSystem.exists(path)) {
+			path = SUtil.getStorageDirectory() + Paths.shaderFragment(fileName);
+		}
 		
 		trace(path);
 		var fragSource:String = "";
